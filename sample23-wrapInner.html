@@ -1,0 +1,32 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <style>
+        .containerDiv {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div').wrapInner('<div class="containerDiv"></div>');
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <div id="div1">
+        DIV 1
+    </div>
+    <div id="div2">
+        DIV 2
+    </div>
+    <div id="div3">
+        DIV 3
+    </div>
+</body>
+</html>

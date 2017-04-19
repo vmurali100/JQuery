@@ -1,0 +1,52 @@
+ <html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <style type="text/css">
+        .imgStyle {
+            width: 100px;
+            height: 100px;
+            border: 3px solid grey;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#divId img').on({
+                mouseover: function () {
+                    $(this).css({
+                        'cursor': 'hand',
+                        'border-Color': 'red'
+                    });
+                },
+                mouseout: function () {
+                    $(this).css({
+                        'cursor': 'default',
+                        'border-Color': 'grey'
+                    });
+                },
+                click: function () {
+                    var imageURL = $(this).attr('src');
+                    $('#mainImage').fadeOut(1000, function () {
+                        $(this).attr('src', imageURL);
+                    }).fadeIn(1000);
+                }
+            });
+        });
+    </script>
+</head>
+<body class="container">
+    <img id="mainImage" style="border:3px solid grey"
+         src="images/img1.jpg" height="500" width="540" />
+    <br />
+    <div id="divId">
+        <img class="imgStyle" src="images/img1.jpg" />
+        <img class="imgStyle" src="Images/img2.jpg" />
+        <img class="imgStyle" src="Images/img3.jpg" />
+        <img class="imgStyle" src="Images/img4.jpg" />
+        <img class="imgStyle" src="Images/img5.jpg" />
+    </div>
+</body>
+</html>
+

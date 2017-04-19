@@ -1,0 +1,48 @@
+ <html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <style>
+        .myDivClass {
+            width: 150px;
+            padding: 5px;
+            font-size: 18px;
+            border: 1px solid black;
+            opacity: .4;
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myButton').click(function () {
+                $('#myDiv1')
+                    .animate({ 'width': 500 }, 1500)
+                    .animate({ 'padding': 20 }, 1500)
+                    .animate({ 'font-size': 50 }, 1500)
+                    .animate({ 'border-width': 10 }, 1500)
+                    .animate({ 'opacity': 1 }, 1500);
+
+                $('#myDiv2')
+                    .animate({ 'width': 500 }, 1500)
+                    .animate({ 'padding': 20 }, 1500)
+                    .animate({ 'font-size': 50 }, 1500)
+                    .animate({ 'border-width': 10 }, 1500)
+                    .animate({ 'opacity': 1 }, 1500);
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input type="button" id="myButton" value="Start Animation" />
+    <br /><br />
+    <div id="myDiv1" class="myDivClass">
+        jQuery animations
+    </div>
+    <br />
+    <div id="myDiv2" class="myDivClass">
+        Pragim Tech
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                getEventDetails(event);
+            }).mouseover(function () {
+                getEventDetails(event);
+            }).mouseout(function () {
+                getEventDetails(event);
+            });
+
+            function getEventDetails(event) {
+                var eventDetails = "Event = " + event.type +
+                                   "<br/> X = " + event.pageX +
+                                   "<br/>Y = " + event.pageY +
+                                   "<br/>Target Type = " + event.target.type +
+                                   "<br/>Target Tag Name = " + event.target.tagName;
+
+                $('#divResult').html(eventDetails);
+            }
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input id="btn" type="button" value="Click me" /><br /><br />
+    <div id="divResult"></div>
+</body>
+</html>
+

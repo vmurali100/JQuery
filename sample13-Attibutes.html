@@ -1,0 +1,22 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert($('div').attr('title'));
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <div id="div1" title="My DIV1">
+        DIV 1
+    </div>
+    <div id="div2" title="My DIV2">
+        DIV 2
+    </div>
+</body>
+</html>
+<!--Example : In this example we have 2 DIV elements. Since attr() function retrieves only the attribute value of first matching element, we only get the title attribute value of the first DIV element. -->

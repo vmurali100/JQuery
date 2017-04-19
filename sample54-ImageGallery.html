@@ -1,0 +1,64 @@
+ <html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <style type="text/css">
+        .imgStyle {
+            width: 100px;
+            height: 100px;
+            border: 3px solid grey;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var imageURLs = new Array();
+            var intervalId;
+            var btnStart = $('#btnStartSlideShow');
+            var btnStop = $('#btnStopSlideShow');
+
+            $('#divId img').each(function () {
+                imageURLs.push($(this).attr('src'));
+            });
+
+            function setImage() {
+                var mainImageElement = $('#mainImage');
+                var currentImageURL = mainImageElement.attr('src');
+                var currentImageIndex = $.inArray(currentImageURL, imageURLs);
+                if (currentImageIndex == (imageURLs.length - 1)) {
+                    currentImageIndex = -1;
+                }
+
+                mainImageElement.attr('src', imageURLs[currentImageIndex + 1])
+            }
+
+            btnStart.click(function () {
+                intervalId = setInterval(setImage, 500);
+                $(this).attr('disabled', 'disabled');
+                btnStop.removeAttr('disabled');
+            });
+
+            btnStop.click(function () {
+                clearInterval(intervalId);
+                $(this).attr('disabled', 'disabled');
+                btnStart.removeAttr('disabled');
+            }).attr('disabled', 'disabled');
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input id="btnStartSlideShow" type="button" value="Start Slideshow" />
+    <input id="btnStopSlideShow" type="button" value="Stop Slideshow" />
+    <br /><br />
+    <img id="mainImage" style="border:3px solid grey"
+         src="Images/img1.jpg" height="500" width="540" />
+    <br />
+    <div id="divId">
+        <img class="imgStyle" src="Images/img1.jpg" />
+        <img class="imgStyle" src="Images/img2.jpg" />
+        <img class="imgStyle" src="Images/img3.jpg" />
+        <img class="imgStyle" src="Images/img4.jpg" />
+        <img class="imgStyle" src="Images/img5.jpg" />
+    </div>
+</body>
+</html>

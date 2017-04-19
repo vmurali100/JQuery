@@ -1,0 +1,30 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function () {
+        // sets a different title attribute value for each DIV element
+        $('div').each(function (i) {
+            $(this).attr('title', 'div ' + (i + 1) + ' title');
+        });
+
+        // Retrieve and alert the title attribute value of all DIV elements
+        $('div').each(function () {
+            alert($(this).attr('title'));
+        });
+    });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <div id="div1" title="My DIV1">
+        DIV 1
+    </div>
+    <div id="div2" title="My DIV2">
+        DIV 2
+    </div>
+</body>
+</html>
+<!-- If you want to set a different value for the title attribute, then you may need to loop thru each element.-->

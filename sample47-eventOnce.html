@@ -1,0 +1,27 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type="button"]').one({
+                mouseover: function () {
+                    $(this).css('background-color', 'yellow');
+                },
+                mouseout: function () {
+                    $(this).css('background-color', 'white');
+                },
+                click: function () {
+                    alert('Button clicked');
+                }
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input type="button" value="Click Me" />
+    <input type="button" value="Click Me" />
+</body>
+</html>

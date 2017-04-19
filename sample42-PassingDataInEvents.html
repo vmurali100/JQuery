@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnClickMe').on('click', {
+                firstName: 'John',
+                lastName: 'Doe'
+            }, sayHello);
+
+            $('#btnClickMe').on('click', {
+                firstName: 'Mary'
+            }, sayHello);
+
+            $('#btnClickMe').on('click', sayHello);
+
+            function sayHello(event) {
+                if (event.data == null) {
+                    alert('No name provided');
+                }
+                else {
+                    alert('Hello ' + event.data.firstName +
+                        (event.data.lastName != null ? ' ' + event.data.lastName : ''));
+                }
+            }
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input id="btnClickMe" type="button" value="Click Me" />
+</body>
+</html>

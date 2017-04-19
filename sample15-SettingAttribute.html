@@ -1,0 +1,28 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // set the same title attribute value for all the DIV elements
+        $('div').attr('title', 'new div title');
+
+        // Retrieve and alert the title attribute value of all DIV elements
+        $('div').each(function () {
+            alert($(this).attr('title'));
+        });
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <div id="div1" title="My DIV1">
+        DIV 1
+    </div>
+    <div id="div2" title="My DIV2">
+        DIV 2
+    </div>
+</body>
+</html>
+<!-- To set the same value for the title attribute of all the elements, then there is no need to loop thru each element. All the div elements in this case will have 'new div title' as the title attribute value.-->

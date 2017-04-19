@@ -1,0 +1,26 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn').mouseup(function (event) {
+                switch (event.which) {
+                    case 1: whichButton = "Left Button Clicked"; break;
+                    case 2: whichButton = "Middle Button Clicked"; break;
+                    case 3: whichButton = "Right Button Clicked"; break;
+                    default: whichButton = "Invalid Button Clicked"; break;
+                }
+                $('#divResult').html(whichButton);
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <input id="btn" type="button" value="Click Me" />
+    <br /><br />
+    <div id="divResult"></div>
+</body>
+</html>

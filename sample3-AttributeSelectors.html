@@ -1,0 +1,52 @@
+
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Selects the div with "title='div1Title' as Attribute 
+            //$('[title="div1Title"]').css('border', '5px solid red');
+
+            //Selects all elements that have title attribute value containing the given substring - Title
+            //$('[title*="Title"]').css('border', '5px solid red');
+
+            //Selects all elements that have title attribute value containing the given word - mySpan
+            //$('[title~="mySpan"]').css('border', '5px solid red');
+
+            //Selects all elements that have title attribute value equal to myTitle or starting with myTitle followed by a hyphen (-)
+            // $('[title|="myTitle"]').css('border', '5px solid red');
+
+            // Selects all elements that have title attribute value starting with div 
+            //$('[title^="div"]').css('border', '5px solid red');
+
+            //Selects all elements that have title attribute value ending with Heading
+            //$('[title$="Heading"]').css('border', '5px solid red');
+        });
+    </script>
+</head>
+<body class="container">
+    <div title="div1Title">
+        DIV 1
+    </div>
+    <br />
+    <div title="div2Title">
+        DIV 2
+    </div>
+    <p title="myTitle-paragraph">
+        This is a paragraph
+    </p>
+    <p title="myTitleHeading">
+        This is a paragraph
+    </p>
+    <span title="div1Title">
+        SAPN 1
+    </span>
+    <br /><br />
+    <span title="mySpan Heading">
+        SPAN 2
+    </span>
+</body>
+</html>

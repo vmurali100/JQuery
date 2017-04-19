@@ -1,0 +1,43 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // $('div').attr({
+            //     'title': 'New Div Title',
+            //     'style': 'border:3px solid red;',
+            //     'name': 'My Div'
+            // });
+
+             $('div')
+                .attr('title', 'New Div Title')
+                .attr('style', 'border:3px solid red;')
+                .attr('name', 'My Div');
+                
+            var result = '';
+            $('div').each(function () {
+                result += 'title = ' + $(this).attr('title') + '<br/>';
+                result += 'style = ' + $(this).attr('style') + '<br/>';
+                result += 'name = ' + $(this).attr('name') + '<br/><br/>';
+            });
+
+            $('#resultSpan').html(result);
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+    <div id="div1" title="My DIV1">
+        DIV 1
+    </div>
+    <br />
+    <div id="div2" title="My DIV2">
+        DIV 2
+    </div>
+    <br />
+    <span id="resultSpan">
+    </span>
+</body>
+</html>

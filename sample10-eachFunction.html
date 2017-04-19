@@ -1,0 +1,26 @@
+ <html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').each(function () {
+                $('#divResult').html($('#divResult').html() + '<br/>' + $(this).text())
+            });
+        });
+    </script>
+</head>
+<body style="font-family:Arial" class="container">
+<body style="font-family:Arial" >
+    <ul>
+        <li>US</li>
+        <li>India</li>
+        <li>UK</li>
+        <li>Canada</li>
+        <li>Australia</li>
+    </ul>
+    <div id="divResult"></div>
+</body>
+</html>
